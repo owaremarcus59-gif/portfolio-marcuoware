@@ -69,7 +69,7 @@ const Navbar = (props) => {
           <div
             style={{ color: `${linkColor}` }}
             onClick={handleNav}
-            className='md:hidden'
+            className='md:hidden px-4'
           >
             <AiOutlineMenu size={25} />
           </div>
