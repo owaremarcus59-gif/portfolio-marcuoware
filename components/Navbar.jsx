@@ -39,7 +39,7 @@ const Navbar = (props) => {
           : 'fixed w-full flex items-center justify-between h-20 z-[100]'
       }
     >
-    <div className='text-lg italic tracking-wide'>marcusoware</div>
+    <div className='text-lg italic tracking-wide px-4'>marcusoware</div>
       <div className='flex justify-between items-center w-full h-full '>
         <Link href='/'>
           <div 
