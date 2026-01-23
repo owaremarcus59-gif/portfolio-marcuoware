@@ -14,7 +14,7 @@ import Node from '../public/assets/skills/node.png';
 import Github from '../public/assets/skills/github1.png';
 import Firebase from '../public/assets/skills/firebase.png';
 import NextJS from '../public/assets/skills/nextjs.png'
-import { GOOGLE_FONT_PROVIDER } from 'next/dist/shared/lib/constants';
+
 
 const Skills = () => {
   return (

@@ -12,20 +12,12 @@ const About = () => {
             About
           </p>
           <h2 className='py-4'>Who I Am</h2>
-          <p className='py-2 text-gray-600'>
-            I specialize in building mobile responsive front-end UI applications
-            that connect with API’s and other backend technologies. I’m
-            passionate about learning new technologies and understand there is
-            more than one way to accomplish a task. Though I am most proficient
-            in building front-end applications using HTML, CSS, Javascript, and
-            React, I am a quick learner and can pick up new tech stacks as
-            needed. I believe that being a great developer is not using one
-            specific language, but choosing the best tool for the job.
+      <p className='py-2 text-gray-600 tracking-wide leading-8 md:max-w-3xl word-spacing-wide'>
+      My interest in computers began at age seven, when I received my first Dell desktop in Tema, Ghana. That early exposure sparked a lasting curiosity about how technology works and how software can solve real-world problems.
+      I began pursuing web development seriously in 2020 and have since grown into a full-stack developer focused on building responsive, scalable web applications. My work spans modern front-end frameworks and backend systems, with hands-on experience integrating APIs, databases, and AI-powered features.
+      In 2026, I transitioned my teaching to Twitch, where I stream and teach web development, full-stack engineering, and practical AI concepts including LangChain-based RAG systems to a global audience.
           </p>
-          <p className='py-2 text-gray-600'>
-            I started serious web developement in 2020 amist covid.My Mom got ill and my family went into a financial crisis.That was when I committed to programming. Programming had been my dream since I was seven(7).I run a Zoom class, where I teach web
-            developement and various fullstack technologies.
-          </p>
+          
           <Link href='/#projects'>
             <p className='py-2 text-gray-600 underline cursor-pointer'>
               Check out some of my latest projects.

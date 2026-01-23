@@ -4,9 +4,62 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import { useEffect, useState } from 'react';
 import ContactImg from '../public/assets/contact.jpg';
 
 const Contact = () => {
+  const [formResult, setFormResult] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Add Forminit SDK script
+    const script = document.createElement('script');
+    script.src = 'https://forminit.com/sdk/v1/forminit.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup if needed
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setFormResult('');
+
+    try {
+      const form = e.target;
+      const formData = new FormData(form);
+
+      // Access Forminit from window object
+      if (!window.Forminit) {
+        throw new Error('Forminit SDK not loaded');
+      }
+
+      const forminit = new window.Forminit();
+      const FORM_ID = 'gx7psejr0nz';
+
+      const { data, redirectUrl, error } = await forminit.submit(FORM_ID, formData);
+
+      if (error) {
+        setFormResult(`Error: ${error.message}`);
+        setIsLoading(false);
+        return;
+      }
+
+      setFormResult('✓ Message sent successfully!');
+      form.reset();
+      setIsLoading(false);
+    } catch (err) {
+      setFormResult(`Error: ${err.message}`);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -71,27 +124,26 @@ const Contact = () => {
           <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
               <form
-                action='https://getform.io/f/5fc82ee9-a1fa-4935-bbf6-b7b449681e96'
-                method='POST'
-                encType='multipart/form-data'
+                id='contact-form'
+                onSubmit={handleSubmit}
               >
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
+                    <label className='uppercase text-sm py-2'>First Name</label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
-                      name='name'
+                      name='fi-sender-firstName'
+                      required
                     />
                   </div>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
-                      Phone Number
-                    </label>
+                    <label className='uppercase text-sm py-2'>Last Name</label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
-                      name='phone'
+                      name='fi-sender-lastName'
+                      required
                     />
                   </div>
                 </div>
@@ -100,7 +152,8 @@ const Contact = () => {
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='email'
-                    name='email'
+                    name='fi-sender-email'
+                    required
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -108,7 +161,8 @@ const Contact = () => {
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='text'
-                    name='subject'
+                    name='fi-text-subject'
+                    required
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -116,12 +170,26 @@ const Contact = () => {
                   <textarea
                     className='border-2 rounded-lg p-3 border-gray-300'
                     rows='10'
-                    name='message'
+                    name='fi-text-message'
+                    required
                   ></textarea>
                 </div>
-                <button className='w-full p-4 text-gray-100 mt-4'>
-                  Send Message
+                <button 
+                  type='submit'
+                  disabled={isLoading}
+                  className='w-full p-4 text-gray-100 mt-4 bg-[#5651e5] hover:bg-[#4540d5] disabled:opacity-50'
+                >
+                  {isLoading ? 'Sending...' : 'Send Message'}
                 </button>
+                {formResult && (
+                  <div className={`mt-4 p-4 rounded-lg text-center ${
+                    formResult.includes('Error') 
+                      ? 'bg-red-100 text-red-700' 
+                      : 'bg-green-100 text-green-700'
+                  }`}>
+                    {formResult}
+                  </div>
+                )}
               </form>
             </div>
           </div>

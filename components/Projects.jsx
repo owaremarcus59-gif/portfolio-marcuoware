@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import dashboardImg from '../public/assets/projects/dashboard.png';
-import socioImg from '../public/assets/projects/socio.png'
-import nirvanaImg from '../public/assets/projects/nirvana.png'
+import agyedabi from '../public/assets/agyedabi.png'
+import bornwire from '../public/assets/bornwire.png'
+import scalf from '../public/assets/scalf.png';
 import ProjectItem from './ProjectItem';
+
 
 const Projects = () => {
   return (
@@ -16,22 +17,22 @@ const Projects = () => {
         <h2 className='py-4'>What I&apos;ve Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
-            title='Dashboard'
-            backgroundImg={dashboardImg}
-            projectUrl='/dashboard'
-            tech='Next Js'
+            title='Agyedabi.Shop'
+            backgroundImg={agyedabi}
+            projectUrl='/agyedabi'
+            tech='next.js,vercel,node.js'
           />
           <ProjectItem
-            title='Socio'
-            backgroundImg={socioImg}
-            projectUrl='/socio'
-            tech='React Js'
+            title='Bornwire.Shop'
+            backgroundImg={bornwire}
+            projectUrl='/bornwire'
+            tech='next.Js, react.js, node.js'
           />
           <ProjectItem
-            title='Nirvana'
-            backgroundImg={nirvanaImg}
-            projectUrl='/nirvana'
-            tech='Next Js |Typescript'
+            title='Scalf.io'
+            backgroundImg={scalf}
+            projectUrl='/scalf'
+            tech='next.js, supabase, postgresql'
           />
           
         </div>
