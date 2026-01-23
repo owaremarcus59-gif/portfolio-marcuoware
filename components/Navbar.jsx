@@ -35,7 +35,7 @@ const Navbar = (props) => {
       style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
-          ? 'fixed w-full h-20 shadow-xl flex items-center justify-between z-[100] ease-in-out duration-300'
+          ? 'fixed w-full h-16 shadow-xl flex items-center justify-between z-[100] ease-in-out duration-300'
           : 'fixed w-full flex items-center justify-between h-20 z-[100]'
       }
     >
