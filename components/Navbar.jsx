@@ -40,7 +40,7 @@ const Navbar = (props) => {
       }
     >
     <div className='text-lg italic tracking-wide'>marcusoware</div>
-      <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+      <div className='flex justify-between items-center w-full h-full '>
         <Link href='/'>
           <div 
           onClick={() => setDark(prev => !prev)}
