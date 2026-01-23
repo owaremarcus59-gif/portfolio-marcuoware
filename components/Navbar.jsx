@@ -12,25 +12,9 @@ const Navbar = (props) => {
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState('#ecf0f3');
   const [linkColor, setLinkColor] = useState('#1f2937');
-  // const [position, setPosition] = useState('fixed')
-  // const router = useRouter();
+ 
 
-  // useEffect(() => {
-  //   if (
-  //     router.asPath === '/property' ||
-  //     router.asPath === '/crypto' ||
-  //     router.asPath === '/netflix' ||
-  //     router.asPath === '/twitch'
-  //   ) {
-  //     setNavBg('transparent');
-  //     setLinkColor('#ecf0f3');
-  //   } else {
-  //     setNavBg('#ecf0f3');
-  //     setLinkColor('#1f2937');
-  //   }
-  // }, [router]);
-
-  const {dark,setDark} = props
+  const {dark,setDark} = props;
   const handleNav = () => {
     setNav(!nav);
   };
@@ -55,6 +39,7 @@ const Navbar = (props) => {
           : 'fixed w-full h-20 z-[100]'
       }
     >
+    <div className='text-lg italic tracking-wide'>marcusoware</div>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           <div 
