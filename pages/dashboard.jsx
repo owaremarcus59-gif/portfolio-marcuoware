@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import agyedabi from '../public/assets/projects/agyedabi.png';
+import agyedabi from '../public/assets/agyedabi.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
