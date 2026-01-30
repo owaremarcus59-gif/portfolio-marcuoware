@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import bornwire from '../public/assets/bornwire.png';
+import scalf from '../public/assets/bornwire.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
@@ -7,17 +7,17 @@ const socio = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[50vh] relative'>
-        <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10' />
+        <div className='absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10 object-contain overflow-none' />
         <Image
-          className='absolute z-1'
-          layout='fill'
-          objectFit='cover'
-          src={bornwire}
+        className='w-full absolute z-1 h-[50vh]  object-cover'
+          width={800}
+          height={500}
+          src={scalf}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Socio App</h2>
-          <h3>React JS / Tailwind / Firebase</h3>
+          <h2 className='py-2'>Bornwire Shop</h2>
+          <h3>Next.Js / Tailwind / Supabase / Postgres / React.Js / Vercel</h3>
         </div>
       </div>
 
@@ -25,17 +25,11 @@ const socio = () => {
         <div className='col-span-4'>
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
-            I built this application in React JS and is hosted on vercel.
-            This app features user authentication with firebase as well as the
-            firestore cloud storage database. This application is pulling movie
-            data from an the IMDB movie API and displaying different categories.
-            It features horizontal sliding and a featured selection. The
-            useContext hook is also being implemented for app-wide state
-            management.
+          <p className='max-w-4xl leading-7 text-lg tracking-wide'>
+          Bornwire is an online store celebrating African heritage, built with React.js, styled with Tailwind CSS, and deployed on Vercel. The platform showcases premium Kente clothing and cultural products, offering users an engaging shopping experience with rich imagery and intuitive navigation. It highlights the craftsmanship behind each piece, tells the story of traditional weaving, and provides seamless browsing through products, testimonials, and services — all optimized for a responsive experience across devices.
           </p>
           <Link
-            href='https://github.com/Weten-Ogen/socio'
+            href='https://github.com/kentemall2025-tech/bornwire.git'
             target='_blank'
            
           >
@@ -56,16 +50,25 @@ const socio = () => {
                 <RiRadioButtonFill className='pr-1' /> React
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Node.Js
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Vercel
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> Supabase
+              </p>
+              <p className='text-gray-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Tailwind
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Javascript
+                <RiRadioButtonFill className='pr-1' /> Typescript
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Firebase
+                <RiRadioButtonFill className='pr-1' /> Supabase
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> IMDB API
+                <RiRadioButtonFill className='pr-1' /> Next.Js
               </p>
             </div>
           </div>
