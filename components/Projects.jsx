@@ -5,7 +5,7 @@ import agyedabi from '../public/assets/agyedabi.png'
 import bornwire from '../public/assets/bornwire.png'
 import scalf from '../public/assets/scalf.png';
 import ProjectItem from './ProjectItem';
-
+import sneakers from '../public/assets/sneakers.png';
 
 const Projects = () => {
   return (
@@ -33,6 +33,12 @@ const Projects = () => {
             backgroundImg={scalf}
             projectUrl='/scalf'
             tech='next.js, supabase, postgresql'
+          />
+           <ProjectItem
+            title='Sneaker-Merce'
+            backgroundImg={sneakers}
+            projectUrl='/sneakers'
+            tech='next.js,tailwind'
           />
           
         </div>

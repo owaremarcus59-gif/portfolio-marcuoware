@@ -13,7 +13,14 @@ import Mongo from '../public/assets/skills/mongo.png';
 import Node from '../public/assets/skills/node.png';
 import Github from '../public/assets/skills/github1.png';
 import Firebase from '../public/assets/skills/firebase.png';
-import NextJS from '../public/assets/skills/nextjs.png'
+import NextJS from '../public/assets/skills/nextjs.png';
+import langchain from '../public/assets/skills/langchain.jpeg';
+import tensorflow from '../public/assets/skills/tensorflow.png';
+import reactNative from '../public/assets/skills/reactnative.png';
+import postgres from '../public/assets/skills/postgres.png';
+import rust from '../public/assets/skills/rust.png';
+import supabase from '../public/assets/skills/supabase.png';
+
 
 
 const Skills = () => {
@@ -51,6 +58,21 @@ const Skills = () => {
                 </div>
               </div>
             </div>
+            <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                <div className='m-auto'>
+                  <Image 
+                  src={reactNative}
+                  width='34px' 
+                  height='34px' 
+                  alt='/' 
+                  />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>react native</h3>
+                </div>
+              </div>
+            </div>
 
             <div className=' sm:max-w-[200px] p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
               <div className='grid grid-cols-2 gap-4 justify-center items-center'>
@@ -83,6 +105,8 @@ const Skills = () => {
                 </div>
               </div>
             </div>
+
+           
 
             <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
               <div className='grid grid-cols-2 gap-4 justify-center items-center'>
@@ -170,8 +194,72 @@ const Skills = () => {
           <div className='gap-3 my-4 max-w-[1240px]'>
           <p className='uppercase tracking-widest text-center lg:text-left text-2xl '>fullstack / others</p>
             <section className='flex flex-wrap  gap-4'>
+            <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                <div className='m-auto'>
+                  <Image src={langchain} width='34px' height='34px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>Langchain</h3>
+                </div>
+              </div>
+            </div>
 
+            <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                <div className='m-auto'>
+                  <Image 
+                  src={tensorflow} 
+                  width='34px' 
+                  height='34px' 
+                  alt='/' 
+                  />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>tensorflow</h3>
+                </div>
+              </div>
+            </div>
                
+            <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                <div className='m-auto'>
+                  <Image 
+                  src={supabase} 
+                  width='34px' 
+                  height='34px' 
+                  alt='/' 
+                  />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>supabase</h3>
+                </div>
+              </div>
+            </div>
+            <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                <div className='m-auto'>
+                  <Image src={rust} 
+                  width='34px' 
+                  height='34px' 
+                  alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>rust</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className=' sm:max-w-[200px]  p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                <div className='m-auto'>
+                  <Image src={postgres} width='34px' height='34px' alt='/' />
+                </div>
+                <div className='flex flex-col items-center justify-center'>
+                  <h3>postgres</h3>
+                </div>
+              </div>
+            </div>
             <div className=' sm:max-w-[200px] p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
               <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                 <div className='m-auto'>
